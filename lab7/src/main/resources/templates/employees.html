@@ -50,7 +50,7 @@
                     <td th:text="${#dates.format(employee.dateOfEmployment, 'dd.MM.yyyy')}">Data zatrudnienia</td>
                     <td th:text="${employee.dateOfTermination != null} ? ${#dates.format(employee.dateOfTermination, 'dd.MM.yyyy')} : 'Wciąż pracuje'">Data zwolnienia</td>
                     
-                    <td><p th:each="skill, skillStat : ${employee.skills}" th:text="!(${skillStat.last}) ? |${skill.name} (${skill.level}), | : |${skill.name} (${skill.level}),|"></p></td>
+                    <td><p th:each="skill, skillStat : ${employee.skills}" th:text="!(${skillStat.last}) ? |${skill.name} (${skill.level}), | : |${skill.name} (${skill.level})|"></p></td>
                     <td><p th:each="comment : ${employee.comments}" th:text="${comment}"> </p></td>
                     
                     <td> <img th:src="${employee.photoUrl}" th:class="empPhoto"/> </td>
